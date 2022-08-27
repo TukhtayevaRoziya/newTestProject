@@ -6,36 +6,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Project</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
-    <nav class="container">
-      <input id="nav_toggle" type="checkbox" />
-      <div class="logo">
-        <img src="assets/logo.webp" />
-        <div class="chooseCity">
-          <img src="assets/city.webp" />
-          <h1>Москва</h1>
+    <div class="headWrap">
+      <nav class="container">
+        <input id="nav_toggle" type="checkbox" />
+        <div class="logo">
+          <img src="assets/logo.webp" />
+          <div class="chooseCity">
+            <img src="assets/city.webp" />
+            <h1>Москва</h1>
+          </div>
+        </div>
+        <ul class="links">
+          <div class="searchWrap">
+            <input
+              type="search"
+              name=""
+              id=""
+              placeholder="Учебное заведение, специальность или профессия"
+            />
+          </div>
+          <div class="headerRight">
+            <div class="likeCounter">
+              <img src="assets/like.webp" alt="" />
+              <h1 id="likeCounter">0</h1>
+            </div>
+            <div class="userInfo">
+              <h1>Екатерина</h1>
+              <img src="assets/avatar.webp" alt="" />
+            </div>
+          </div>
+        </ul>
+        <label for="nav_toggle" class="icon_burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
+      </nav>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <a href="#universities" class="swiper-slide">Вузы</a>
+          <a href="#colleges" class="swiper-slide">Колледжи</a>
+          <a href="#technicalSchool" class="swiper-slide">Техникумы</a>
+          <a href="#schools" class="swiper-slide">Училища</a>
+          <a href="#specialties" class="swiper-slide">Специальности</a>
+          <a href="#Professions" class="swiper-slide">Профессии</a>
+          <a href="#reviews" class="swiper-slide">Отзывы</a>
+          <a href="#educationalInstitutions" class="swiper-slide"
+            >Учебным заведениям</a
+          >
+          <a href="#careerGuidanceTest" class="swiper-slide"
+            >Тест на профориентацию</a
+          >
+
+          <a href="#universities" class="swiper-slide">Вузы</a>
+          <a href="#colleges" class="swiper-slide">Колледжи</a>
+          <a href="#technicalSchool" class="swiper-slide">Техникумы</a>
+          <a href="#schools" class="swiper-slide">Училища</a>
+          <a href="#specialties" class="swiper-slide">Специальности</a>
+          <a href="#Professions" class="swiper-slide">Профессии</a>
+          <a href="#reviews" class="swiper-slide">Отзывы</a>
+          <a href="#educationalInstitutions" class="swiper-slide"
+            >Учебным заведениям</a
+          >
+          <a href="#careerGuidanceTest" class="swiper-slide"
+            >Тест на профориентацию</a
+          >
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+
+    <!--------------------breadcrump-------------------->
+
+    <nav class="breadcrumb">
+      <ol>
+        <li>
+          <a href="#"> Москва </a>
+        </li>
+        <li>
+          <a href="#"> Высшее образование </a>
+        </li>
+        <li>
+          <a href="#"> Вузы </a>
+        </li>
+        <li>
+          <span> МГТУ им. Н.Э. Баумана </span>
+        </li>
+      </ol>
+    </nav>
+
+    <!--------------------photo-------------------->
+
+    <div class="headPhoto">
+      <div class="headPhoto__icon">
+        <img src="assets/icon.webp" alt="" />
+      </div>
+      <div class="headPhoto__btn">
+        <button>оставить отзыв</button>
+        <button>проверить шансы поступить</button>
+      </div>
+    </div>
+
+    <!--------------------photo title-------------------->
+    <div class="headPhotoTitle">
+      <div class="headPhotoTitle__FirstLine">
+        <h1>
+          Московский государственный технический университет имени Н.Э. Бáумана
+        </h1>
+        <div class="headPhotoTitle__FirstLine__like">
+          <img src="assets/like.webp" alt="">
+          <p>В Избранное</p>
         </div>
       </div>
-      <ul class="links">
-        <div class="searchWrap">
-          <input
-            type="search"
-            name=""
-            id=""
-            placeholder="Учебное заведение, специальность или профессия"
-          />
-        </div>
-        <div>
-          <img src="assets/like.webp" alt="">
-        </div>
-        <button class="btn">Contact</button>
-      </ul>
-      <label for="nav_toggle" class="icon_burger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </label>
-    </nav>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      let swiper = new Swiper(".mySwiper", {
+        slidesPerView: 6,
+        spaceBetween: 30,
+        slidesPerGroup: 6,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
