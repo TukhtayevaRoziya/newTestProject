@@ -15,7 +15,7 @@
     <div class="headWrap">
       <nav class="container">
         <input id="nav_toggle" type="checkbox" />
-        <div class="logo">
+        <div class="logo" id="logo">
           <img src="assets/logo.webp" />
           <div class="chooseCity">
             <img src="assets/city.webp" />
@@ -42,22 +42,39 @@
             </div>
           </div>
         </div>
-        <ul class="links">
-          <a href="#universities">Вузы</a>
-          <a href="#colleges">Колледжи</a>
-          <a href="#technicalSchool">Техникумы</a>
-          <a href="#schools">Училища</a>
-          <a href="#specialties">Специальности</a>
-          <a href="#Professions">Профессии</a>
-          <a href="#reviews">Отзывы</a>
-          <a href="#educationalInstitutions">Учебным заведениям</a>
-          <a href="#careerGuidanceTest">Тест на профориентацию</a>
-        </ul>
-        <label for="nav_toggle" class="icon_burger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </label>
+        <nav class="navbar_sm">
+          <div class="container0">
+              <div id="i" class="inav">
+                  <div class="c1"></div>
+                  <div class="c2"></div>
+                  <div class="c3"></div>
+              </div>
+              <div class="logo">
+                <div class="logo_img">
+
+                  <img src="assets/logo.webp" />
+                </div>
+            <div class="chooseCity">
+              <img src="assets/city.webp" />
+              <h1>Москва</h1>
+            </div>
+            <div class="likeCounter">
+              <img src="assets/like.webp" alt="" />
+              <h1 id="likeCounter">0</h1>
+            </div>
+          </div>
+          
+          <ul id="nav" class="nav">
+            <div class="userInfo">
+              <h1>Екатерина</h1>
+              <img src="assets/avatar.webp" alt="" />
+            </div>
+            <a href="#HOME">HOME</a>
+           <a href="#Missions">OUR MISSIONS</a>
+            <a href="#About">ABOUT</a>
+            <a href="#Contact">CONTACT</a>
+          </ul>
+      </nav>  
       </nav>
 
       <div class="swiper mySwiper">
@@ -96,101 +113,9 @@
 
     </div>
 
-    <!--------------------breadcrump-------------------->
-
-    <nav class="breadcrumb" id="breadcrumb">
-      <ol>
-        <li>
-          <a href="#"> Москва </a>
-        </li>
-        <li>
-          <a href="#"> Высшее образование </a>
-        </li>
-        <li>
-          <a href="#"> Вузы </a>
-        </li>
-        <li>
-          <span> МГТУ им. Н.Э. Баумана </span>
-        </li>
-      </ol>
-    </nav>
-    <nav class="breadcrumb">
-      <ol>
-        <li>
-        </li>
-
-        <li>
-          <span> МГТУ им. Н.Э. Баумана </span>
-        </li>
-      </ol>
-    </nav>
-
-    <!--------------------photo-------------------->
-
-    <div class="headPhoto">
-      <div class="headPhoto__icon">
-        <img src="assets/icon.webp" alt="" />
-      </div>
-      <div class="headPhoto__btn">
-        <button>оставить отзыв</button>
-        <button>проверить шансы поступить</button>
-      </div>
-    </div>
-
-    <!--------------------photo title-------------------->
-    <div class="headPhotoTitle">
-      <div class="headPhotoTitle__FirstLine">
-        <h1>
-          Московский государственный технический университет имени Н.Э. Бáумана
-        </h1>
-        <div class="headPhotoTitle__FirstLine__btn">
-          <div class="headPhotoTitle__FirstLine__like">
-            <img src="assets/like.webp" alt="" />
-            <p>В Избранное</p>
-          </div>
-          <img src="assets/next.webp" alt="" />
-          <img src="assets/next2.webp" alt="" />
-        </div>
-      </div>
-      <div class="headPhotoTitle__SecondLine">
-        <div class="headPhotoTitle__SecondLine_1">
-          <span> &#9733; </span>
-          <h1>2.4</h1>
-          <p>(75 отзывов)</p>
-        </div>
-
-        <div id="dot"></div>
-
-        <div class="headPhotoTitle__SecondLine_1">
-          <p>Москва, ул. Новочеремушкинская, д. 69</p>
-        </div>
-
-        <div id="dot"></div>
-
-        <div class="headPhotoTitle__SecondLine_1">
-          <p>Приемная комиссия: 7 (499) 181 21 33</p>
-        </div>
-      </div>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
-    <script>
-      let swiper = new Swiper(".mySwiper", {
-        slidesPerView: 6,
-        spaceBetween: 30,
-        slidesPerGroup: 6,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
